@@ -1,0 +1,36 @@
+{
+  "name": "napoli",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "export": "nuxt export",
+    "serve": "nuxt serve",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/vue-fontawesome": "^0.1.10",
+    "@nuxtjs/axios": "^5.11.0",
+    "axios": "^0.19.2",
+    "cookieparser": "^0.1.0",
+    "firebase": "^7.18.0",
+    "js-cookie": "^2.2.1",
+    "jump.js": "^1.0.2",
+    "jwt-decode": "^2.2.0",
+    "nuxt": "^2.13.0",
+    "nuxt-fontawesome": "^0.4.0",
+    "swiper": "^5.4.5",
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-typed-js": "^0.1.2"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^2.0.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^9.0.2"
+  }
+}
