@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navigation />
+    <Navigation :isLoggedIn="isLoggedIn" />
     <div class="flex justify-center items-center py-20">
       <div class="w-10/12 px-5 py-20 md:px-40 md:py-40 bg-orange-500 shadow-lg">
         <form @submit.prevent>
@@ -63,17 +63,17 @@
             />
             <div class="flex flex-col items-center mt-20">
               <button
-                class="px-5 py-3 bg-black text-white w-1/2 uppercase tracking-widest font-bold"
+                class="px-5 py-3 bg-black text-white w-1/2 uppercase tracking-widest font-bold focus:outline-none"
                 @click="addLunch"
-              >Uppdatera</button>
+              >
+                Uppdatera
+              </button>
               <button
-                class="px-5 py-3 bg-black text-white mt-5 w-1/2 uppercase tracking-widest font-bold"
+                class="px-5 py-3 bg-black text-white mt-5 w-1/2 uppercase tracking-widest font-bold focus:outline-none"
                 @click="removeLunch"
-              >Rensa</button>
-              <button
-                class="px-5 py-3 bg-black text-white mt-5 w-1/2 uppercase tracking-widest font-bold"
-                @click="logOut"
-              >Logga ut</button>
+              >
+                Rensa
+              </button>
             </div>
           </div>
         </form>
@@ -93,7 +93,7 @@ import Navigation from "~/components/Navigation/Navigation";
 
 export default {
   components: {
-    Navigation,
+    Navigation
   },
   data() {
     return {
@@ -103,9 +103,10 @@ export default {
         tuesday: "",
         wednesday: "",
         thursday: "",
-        friday: "",
+        friday: ""
       },
       token: "",
+      isLoggedIn: true
     };
   },
   asyncData({ req, redirect }) {
@@ -130,18 +131,19 @@ export default {
       var ref = firebase.database().ref("days");
       ref
         .once("value")
-        .then(function (snapshot) {
+        .then(function(snapshot) {
           let a = snapshot.exists(); // true
           return a;
         })
-        .then((a) => {
+        .then(a => {
           if (a) {
-            alert("du måste trycka på rensa först");
+            alert("Du måste trycka på rensa först!!");
           } else {
             this.$axios.$post(
               `https://napoli-b522c.firebaseio.com/days.json?auth=${this.token}`,
               this.lunch
             );
+            alert("Du har lagt till veckans lunch");
           }
         });
     },
@@ -151,8 +153,10 @@ export default {
         .$delete(
           `https://napoli-b522c.firebaseio.com/days.json?auth=${this.token}`
         )
-        .then((res) => console.log(res))
-        .catch((error) => console.log(error));
+        .then(res =>
+          alert("Du har rensat veckans lunch! Du kan nu lägga in en ny!")
+        )
+        .catch(error => console.log(error));
     },
     logOut() {
       firebase
@@ -160,11 +164,12 @@ export default {
         .signOut()
         .then(() => {
           this.$router.push("/admin");
+          this.isLoggedIn = "false";
         });
     },
 
     setupFirebase() {
-      firebase.auth().onAuthStateChanged((user) => {
+      firebase.auth().onAuthStateChanged(user => {
         if (user) {
           console.log("logged in" + user.uid);
 
@@ -173,7 +178,7 @@ export default {
           firebase
             .auth()
             .currentUser.getIdToken(true)
-            .then((token) => {
+            .then(token => {
               Cookies.set("access_token", token);
               this.token = token;
             });
@@ -184,7 +189,7 @@ export default {
           Cookies.remove("access_token");
         }
       });
-    },
-  },
+    }
+  }
 };
 </script>

@@ -1,14 +1,12 @@
 <template>
   <div>
     <Navigation />
-    <section>
+    <section class="pb-20 pt-10">
       <div
-        class="flex flex-col items-center justify-center w-full mt-20 text-black pb-10"
+        class="flex flex-col items-center justify-center w-full text-black pb-10"
       >
         <img src="~assets/images/logo.png" alt />
-        <!--   <h1 class="xl:text-6xl">Napoli | Olofström</h1>
-        <h2 class="xl:text-4xl">Pizzeria | Restaurang</h2>
-        <h3 class="xl:text-4xl">Bar | Café | Pub</h3>-->
+
         <vue-typed-js
           class="mt-10"
           :strings="['pizzeria', 'pub', 'bar', 'café', 'restaurang']"
@@ -16,7 +14,9 @@
           :backSpeed="50"
           :backDelay="1000"
         >
-          <h2 class="text-2xl md:text-4xl xl:text-6xl text-center">
+          <h2
+            class="text-2xl md:text-4xl xl:text-6xl text-center border-dashed border-b-2 border-orange-500"
+          >
             <span
               class="text-3xl md:text-6xl typing font-bold uppercase text-orange-600"
             ></span>
@@ -38,7 +38,7 @@
           <div
             class="flex justify-center items-center text-5xl text-white bg-black h-full w-full bg-opacity-50 hover:bg-opacity-75 transition duration-500 ease-in-out"
           >
-            <p class="cursor-pointer " @click.passive="goToBeer">Öl</p>
+            <p class="cursor-pointer" @click.passive="goToBeer">Öl</p>
           </div>
         </swiper-slide>
         <swiper-slide class="slide-3">
@@ -50,7 +50,7 @@
         </swiper-slide>
         <swiper-slide class="slide-4">
           <div
-            class="flex justify-center items-center text-4xl xl:text-5xl text-white bg-black h-full w-full bg-opacity-50 hover:bg-opacity-75 transition duration-500 ease-in-out"
+            class="flex justify-center items-center text-4xl xl:text-4xl text-white bg-black h-full w-full bg-opacity-50 hover:bg-opacity-75 transition duration-500 ease-in-out"
           >
             <p class="cursor-pointer" @click.passive="goToOther">
               Övriga drycker
@@ -70,8 +70,12 @@
         <div class="swiper-button-next" slot="button-next"></div>
       </swiper>
     </section>
-    <section class="flex justify-around flex-wrap items-stretch mt-20 pb-20">
+    <section class="flex justify-around flex-wrap items-stretch mt-40 pb-20">
+      <!--FIRST BOX-->
       <div
+        data-aos="fade-right"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000"
         class="w-11/12 border-solid border-2 border-orange-500 pl-5 py-20 shadow-2xl xl:w-5/12 xl:px-10"
       >
         <p class="text-3xl xl:text-4xl text-center font-bold mb-5 mr-5 wine">
@@ -232,11 +236,15 @@
           </div>
         </div>
       </div>
+      <!--SECOND BOX-->
       <div
+        data-aos="fade-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000"
         class="w-11/12 mt-10 border-solid border-2 border-orange-500 pl-5 py-20 shadow-2xl xl:w-5/12 xl:px-10 xl:mt-0"
       >
         <div class="flex flex-col">
-          <p class="text-3xl xl:text-4xl text-center font-bold  mr-5 cider">
+          <p class="text-3xl xl:text-4xl text-center font-bold mr-5 cider">
             Cider
           </p>
           <div class="flex justify-between items-end">

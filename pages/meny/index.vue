@@ -1,14 +1,13 @@
 <template>
   <div>
     <Navigation />
-    <section>
+
+    <section class="pb-20 pt-10">
       <div
-        class="flex flex-col items-center justify-center w-full mt-20 text-black pb-10"
+        class="flex flex-col items-center justify-center w-full text-black pb-10"
       >
         <img src="~assets/images/logo.png" alt />
-        <!--   <h1 class="xl:text-6xl">Napoli | Olofström</h1>
-        <h2 class="xl:text-4xl">Pizzeria | Restaurang</h2>
-        <h3 class="xl:text-4xl">Bar | Café | Pub</h3>-->
+
         <vue-typed-js
           class="mt-10"
           :strings="['pizzeria', 'pub', 'bar', 'café', 'restaurang']"
@@ -16,9 +15,11 @@
           :backSpeed="50"
           :backDelay="1000"
         >
-          <h2 class="text-2xl md:text-4xl xl:text-6xl text-center">
+          <h2
+            class="text-2xl md:text-4xl xl:text-6xl text-center border-dashed border-b-2 border-orange-500 "
+          >
             <span
-              class="text-3xl md:text-6xl typing font-bold uppercase text-orange-600"
+              class="text-3xl md:text-6xl typing font-bold uppercase tracking-widest text-orange-600"
             ></span>
             <br />Napoli | Olofström
           </h2>
@@ -32,7 +33,7 @@
             class="flex flex-col justify-center items-center text-5xl text-white bg-black h-full w-full bg-opacity-50 hover:bg-opacity-75 transition duration-500 ease-in-out"
           >
             <p class="cursor-pointer" @click.passive="goToPizza">Pizza</p>
-            <p class="text-xl px-3 text-center md:text-2xl">
+            <p class="text-xl px-3 text-center md:text-2xl xl:text-xl">
               Vi har även glutenfria pizzor
             </p>
           </div>
@@ -53,7 +54,7 @@
         </swiper-slide>
         <swiper-slide class="slide-4">
           <div
-            class="flex justify-center items-center text-4xl xl:text-5xl text-white bg-black h-full w-full bg-opacity-50 hover:bg-opacity-75 transition duration-500 ease-in-out"
+            class="flex justify-center items-center text-4xl xl:text-4xl text-white bg-black h-full w-full bg-opacity-50 hover:bg-opacity-75 transition duration-500 ease-in-out"
           >
             <p class="cursor-pointer" @click.passive="goToPotatoe">
               Bakad potatis
@@ -62,7 +63,7 @@
         </swiper-slide>
         <swiper-slide class="slide-5">
           <div
-            class="flex justify-center items-center text-4xl xl:text-5xl text-white bg-black h-full w-full bg-opacity-50 hover:bg-opacity-75 transition duration-500 ease-in-out"
+            class="flex justify-center items-center text-4xl xl:text-4xl text-white bg-black h-full w-full bg-opacity-50 hover:bg-opacity-75 transition duration-500 ease-in-out"
           >
             <p class="cursor-pointer" @click.passive="goToHamburger">
               Hamburgare
@@ -71,7 +72,7 @@
         </swiper-slide>
         <swiper-slide class="slide-6">
           <div
-            class="flex justify-center items-center text-4xl xl:text-5xl text-white bg-black h-full w-full bg-opacity-50 hover:bg-opacity-75 transition duration-500 ease-in-out"
+            class="flex justify-center items-center text-4xl xl:text-4xl text-white bg-black h-full w-full bg-opacity-50 hover:bg-opacity-75 transition duration-500 ease-in-out"
           >
             <p class="cursor-pointer" @click.passive="goToSteak">
               Kött &#38; fiskrätter
@@ -97,26 +98,49 @@
         <div class="swiper-button-prev" slot="button-prev"></div>
         <div class="swiper-button-next" slot="button-next"></div>
       </swiper>
-      <div class="mt-32 flex flex-col items-center">
-        <p class="text-4xl text-center uppercase tracking-widest md:text-5xl">
-          Beställ på:
-        </p>
-        <p class="text-2xl font-bold">0454-917 01</p>
+      <div class="flex justify-center">
+        <div
+          data-aos="flip-left"
+          data-aos-easing="ease-out"
+          data-aos-duration="500"
+          class="mt-32 flex flex-col items-center py-10 w-4/5 xl:w-2/4 border-2 border-dotted border-orange-500 shadow-lg "
+        >
+          <p class="text-4xl text-center tracking-wide md:text-5xl">
+            Beställ på:
+          </p>
+          <p class="text-2xl font-bold">0454-917 01</p>
+        </div>
       </div>
     </section>
+    <section class="flex justify-center pt-24 pb-18">
+      <vue-typed-js :strings="['Helgmeny']" :typeSpeed="300" :loop="true">
+        <h2
+          class="text-xl md:text-2xl xl:text-4xl text-center border-dashed border-b-2 border-orange-500 "
+        >
+          <span
+            class="text-xl md:text-4xl typing font-bold uppercase tracking-widest text-orange-600"
+          ></span>
+          <br />Lördag - söndag | 11:00-14:00
+        </h2>
+      </vue-typed-js>
+    </section>
+
     <section class="my-20 xl:my-40">
       <div
         class="flex flex-col items-center xl:flex xl:justify-around xl:flex-row xl:flex-wrap xl:h-full xl:items-stretch"
       >
         <!--FIRST BOX-->
         <div
+          data-aos="fade-right"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1000"
           class="w-11/12 border-solid border-2 border-orange-500 pl-5 py-20 shadow-2xl xl:w-5/12 xl:px-10 pizza"
         >
           <p class="text-3xl xl:text-4xl text-center font-bold mb-5 mr-5">
             Pizza
           </p>
 
-          <p class="md:text-2xl xl:text-3xl">
+          <p class="md:text-2xl xl:text-3xl text-red-500">
             Prisklass 1 - 80:- | Familjepizza 190:-
           </p>
 
@@ -142,7 +166,7 @@
               <p>Lök, salami</p>
             </div>
 
-            <p class="md:text-2xl mt-5 xl:mt-10 xl:text-3xl">
+            <p class="md:text-2xl mt-5 xl:mt-10 xl:text-3xl  text-red-500">
               Prisklass 2 - 85:- | Familjepizza 200:-
             </p>
             <div class="flex flex-col">
@@ -201,7 +225,7 @@
               <p class="text-xl font-bold mt-5">19. Holje</p>
               <p>Skinka, champinjoner, ananas</p>
             </div>
-            <p class="md:text-2xl mt-5 xl:mt-10 xl:text-3xl">
+            <p class="md:text-2xl mt-5 xl:mt-10 xl:text-3xl text-red-500">
               Prisklass 3 - 90:- | Familjepizza 210:-
             </p>
             <div class="flex flex-col">
@@ -262,7 +286,7 @@
             </div>
             <div class="flex justify-center">
               <div
-                class="flex flex-col bg-orange-500 w-11/12 p-5 text-center text-white rounded-lg shadow-xl mt-20 mr-5 xl:w-3/4 xl:mt-64"
+                class="flex flex-col bg-orange-500 w-11/12 p-5 text-center text-white rounded-lg shadow-xl mt-20 mr-5 xl:w-3/4 xl:mt-40 gradient"
               >
                 <p class="text-xl">Extra tillbehör</p>
                 <p class="text-sm xl:text-md">
@@ -274,12 +298,15 @@
         </div>
         <!--SECOND BOX-->
         <div
+          data-aos="fade-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1000"
           class="w-11/12 border-solid border-2 border-orange-500 pl-5 py-20 mt-10 shadow-2xl xl:w-5/12 xl:px-10 pizza xl:mt-0"
         >
           <p class="text-3xl mr-5 xl:text-4xl text-center font-bold mb-5">
             Pizza
           </p>
-          <p class="md:text-2xl xl:text-3xl">
+          <p class="md:text-2xl xl:text-3xl text-red-500">
             Prisklass 4 - 95:- | Familjepizza 220:-
           </p>
           <div class="flex flex-col">
@@ -513,7 +540,7 @@
               </div>
               <div class="flex justify-center">
                 <div
-                  class="flex flex-col bg-orange-500 w-11/12 p-5 text-center text-white rounded-lg shadow-xl mt-20 mr-5 xl:w-3/4 xl:mt-40"
+                  class="flex flex-col bg-orange-500 w-11/12 p-5 text-center text-white rounded-lg shadow-xl mt-20 mr-5 xl:w-3/4 xl:mt-18 gradient"
                 >
                   <p class="text-xl">Extra tillbehör</p>
                   <p class="text-sm xl:text-md">
@@ -526,12 +553,15 @@
         </div>
         <!--THIRD BOX-->
         <div
+          data-aos="fade-right"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1000"
           class="w-11/12 border-solid border-2 border-orange-500 pl-5 py-20 mt-10 shadow-2xl xl:w-5/12 xl:px-10 pizza"
         >
           <p class="text-3xl mr-5 xl:text-4xl text-center font-bold mb-5">
             Specialpizzor
           </p>
-          <p class="md:text-2xl xl:text-3xl mr-5">
+          <p class="md:text-2xl xl:text-3xl mr-5 text-red-500">
             Vanlig 100:- | Familjepizza 230:-
           </p>
           <p class="xl:text-2xl mr-5">Med mozzarellaost</p>
@@ -574,7 +604,7 @@
             <p class="text-3xl xl:text-4xl text-center font-bold mt-10 mr-5">
               Plankpizzor
             </p>
-            <p class="mt-5 md:text-2xl xl:text-3xl">
+            <p class="mt-5 md:text-2xl xl:text-3xl text-red-500">
               Vanlig 100:- | Familjepizza 230:-
             </p>
             <div class="flex flex-col">
@@ -597,7 +627,7 @@
             <p class="text-center font-bold mt-10 mr-5 xl:text-4xl">
               American Pan Pizza
             </p>
-            <p class="md:text-2xl xl:text-3xl text-center mr-5">
+            <p class="md:text-2xl xl:text-3xl text-center mr-5 text-red-500">
               Small 100:- (1 pers) | Medium 140:- (1-2 pers) | Large 220:- (2-4
               pers)
             </p>
@@ -632,7 +662,7 @@
 
             <div class="flex justify-center mb-20">
               <div
-                class="flex flex-col bg-orange-500 w-11/12 p-5 text-center text-white rounded-lg shadow-xl mt-20 mr-5 xl:w-3/4"
+                class="flex flex-col bg-orange-500 w-11/12 p-5 text-center text-white rounded-lg shadow-xl mt-20 mr-5 xl:w-3/4 gradient"
               >
                 <p class="text-xl">Extra tillbehör</p>
                 <p class="text-sm xl:text-md">
@@ -647,7 +677,7 @@
             <p class="xl:text-2xl text-center mr-5">
               Nybakad bröd, isbergssallad, tomat och gurka ingår
             </p>
-            <p class="text-2xl xl:text-3xl text-center">95:-</p>
+            <p class="text-2xl xl:text-3xl text-center text-red-500">95:-</p>
             <div class="flex flex-col">
               <p class="text-xl font-bold mt-5">1. Grekisk sallad</p>
               <p>Fetaost, oliver, färsk paprika, lök</p>
@@ -688,7 +718,9 @@
             <p class="xl:text-2xl text-center mr-5">
               Tomat, lök och gurka ingår
             </p>
-            <p class="text-2xl xl:text-3xl text-center mr-5">95:-</p>
+            <p class="text-2xl xl:text-3xl text-center mr-5 text-red-500">
+              95:-
+            </p>
             <div class="flex flex-col">
               <p class="text-xl font-bold mt-5">1. Kebab med bröd</p>
               <p>Nybakat bröd, kebabkött, sallad, sås</p>
@@ -733,12 +765,15 @@
         </div>
         <!--FOURTH BOX-->
         <div
+          data-aos="fade-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1000"
           class="w-11/12 border-solid border-2 border-orange-500 pl-5 py-20 mt-10 shadow-2xl xl:w-5/12 xl:px-10 pizza xl:mt-10"
         >
           <p class="text-3xl xl:text-4xl text-center font-bold potatoe mr-5">
             Bakad Potatis
           </p>
-          <p class="text-2xl xl:text-3xl text-center mr-5">95:-</p>
+          <p class="text-2xl xl:text-3xl text-center mr-5 text-red-500">95:-</p>
           <div class="flex flex-col">
             <div class="flex flex-col">
               <p class="text-xl font-bold mt-5">1. Skinka</p>
@@ -965,7 +1000,7 @@
             <img
               src="~assets/images/guy-eating.jpg"
               alt="Stek"
-              class="w-11/12 mr-5 xl:max-w-xl shadow-2xl xl:mt-10"
+              class="w-11/12 mr-5 xl:max-w-xl shadow-2xl xl:mt-40"
             />
           </div>
         </div>
@@ -981,6 +1016,7 @@ import { VueTypedJs } from "vue-typed-js";
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
 import jump from "jump.js";
+
 import FooterSection from "~/components/Footer/FooterSection";
 
 export default {
@@ -1068,6 +1104,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.gradient {
+  background-image: linear-gradient(
+    to right,
+    #ff512f 0%,
+    #f09819 51%,
+    #ff512f 100%
+  );
+}
+
 .swiper {
   height: 50vh;
 

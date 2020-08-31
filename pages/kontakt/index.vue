@@ -2,10 +2,8 @@
   <div>
     <Navigation />
     <div class="flex justify-around items-center py-20 bg-gray-200">
-      <div
-        class="flex flex-col w-10/12 md:w-2/4 lg:w-4/12 xl:w-full justify-around xl:flex-row xl:mr-40"
-      >
-        <div class="flex flex-col">
+      <div class="flex flex-col w-10/12 md:w-2/4 lg:w-4/12 xl:w-full justify-around xl:flex-row">
+        <div class="flex flex-col xl:w-1/4">
           <h1
             class="text-2xl font-bold xl:text-4xl r-2 border-b-2 border-orange-500 text-center"
           >Sommaröppettider</h1>
@@ -14,7 +12,7 @@
           <p class="text-xl text-center">Fredag-Lördag: 11:00-23:00</p>
           <p class="text-xl text-center">Söndag: 11:00-22:00</p>
         </div>
-        <div class="flex flex-col">
+        <div class="flex flex-col xl:w-1/4">
           <h1
             class="text-2xl xl:text-4xl font-bold border-b-2 mt-5 xl:mt-0 border-orange-500 text-center"
           >Vinteröppettider</h1>
@@ -23,10 +21,10 @@
           <p class="text-xl text-center">Fredag-Lördag: 11:00-23:00</p>
           <p class="text-xl text-center">Söndag: 11:00-21:00</p>
         </div>
-        <div>
-          <h2
+        <div class="flex flex-col xl:w-1/4">
+          <h1
             class="text-2xl xl:text-4xl border-b-2 font-bold border-orange-500 text-center mt-5 xl:mt-0"
-          >Kontakt</h2>
+          >Kontakt</h1>
           <p class="text-xl text-center mt-5 font-bold">Restaurang Napoli</p>
           <p class="text-center">Östra Storgatan 5,</p>
           <p class="text-center">293 34, Olofström</p>

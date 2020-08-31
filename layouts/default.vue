@@ -8,7 +8,7 @@
 
 <style>
 html {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Old Standard TT", sans-serif;
 
   font-size: 16px;
   word-spacing: 1px;

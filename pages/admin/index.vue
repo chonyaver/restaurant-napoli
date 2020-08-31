@@ -1,11 +1,15 @@
 <template>
   <div>
-    <Navigation :isLoggedIn="isLoggedIn" />
+    <Navigation />
     <div class="flex justify-center items-center mt-20 pb-20">
-      <div class="cont-form px-5 py-20 md:px-40 md:py-40 bg-orange-500 shadow-lg">
+      <div
+        class="cont-form px-5 py-20 md:px-40 md:py-40 bg-orange-500 shadow-lg"
+      >
         <form @submit.prevent>
           <div class="flex flex-col">
-            <h1 class="mb-5 text-center text-4xl md:text-6xl text-white">Logga in</h1>
+            <h1 class="mb-5 text-center text-4xl md:text-6xl text-white">
+              Logga in
+            </h1>
 
             <label for="email" class="mb-2 text-white">
               <b>Email:</b>
@@ -28,7 +32,9 @@
               required
               v-model="password"
             />
-            <button class="px-5 py-3 bg-black text-white" @click="logIn">Logga in</button>
+            <button class="px-5 py-3 bg-black text-white" @click="logIn">
+              Logga in
+            </button>
           </div>
         </form>
       </div>
@@ -45,26 +51,24 @@ export default {
   data() {
     return {
       email: "",
-      password: "",
-      isLoggedIn: "false",
+      password: ""
     };
   },
 
   components: {
-    Navigation,
+    Navigation
   },
   methods: {
     logIn() {
       firebase
         .auth()
         .signInWithEmailAndPassword(this.email, this.password)
-        .then((user) => {
-          console.log(user.email);
+        .then(user => {
           this.$router.push("/admin/loggedin");
           this.isLoggedIn = "true";
         });
-    },
-  },
+    }
+  }
 };
 </script>
 

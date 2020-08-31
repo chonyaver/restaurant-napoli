@@ -14,14 +14,14 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: Napoli | Olofström,
+    title: "Napoli | Olofström",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
         hid: "description",
         name: "description",
-        content: process.env.npm_package_description || ""
+        content: "Restaurang pizzeria bar cafe pub Olofström "
       }
     ],
     link: [
@@ -29,7 +29,7 @@ export default {
       {
         rel: "stylesheet",
         href:
-          "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+          "https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;600&display=swap"
       }
     ]
   },
@@ -41,7 +41,13 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: ["~/plugins/firebase.js"],
+  plugins: [
+    "~/plugins/firebase.js",
+    {
+      src: "~plugins/aos.js",
+      ssr: false
+    }
+  ],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -50,6 +56,7 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
+
   buildModules: [
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     "@nuxtjs/tailwindcss"
