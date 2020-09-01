@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="overflow-hidden">
     <Navigation />
 
-    <section class="pb-20 pt-10">
+    <section class="pb-20 pt-10 up">
       <div
         class="flex flex-col items-center justify-center w-full text-black pb-10"
       >
@@ -106,7 +106,7 @@
           class="mt-32 flex flex-col items-center py-10 w-4/5 xl:w-2/4 border-2 border-dotted border-orange-500 shadow-lg "
         >
           <p class="text-4xl text-center tracking-wide md:text-5xl">
-            Beställ på:
+            För beställningar:
           </p>
           <p class="text-2xl font-bold">0454-917 01</p>
         </div>
@@ -120,7 +120,8 @@
           <span
             class="text-xl md:text-4xl typing font-bold uppercase tracking-widest text-orange-600"
           ></span>
-          <br />Lördag - söndag | 11:00-14:00
+          <br />Lördag - söndag | 11:00-14:00 <br />À la carte 4-8 |
+          <span class="text-red-500">149:-</span>
         </h2>
       </vue-typed-js>
     </section>
@@ -230,7 +231,7 @@
             </p>
             <div class="flex flex-col">
               <p class="text-xl font-bold mt-5">20. Calzone Special</p>
-              <p>Skinka, champinjoner, räkor (Inbakade)</p>
+              <p>Skinka, champinjoner, räkor (Inbakad)</p>
             </div>
             <div class="flex flex-col">
               <p class="text-xl font-bold mt-5">21. Hawaii special</p>
@@ -274,7 +275,7 @@
             </div>
             <div class="flex flex-col">
               <p class="text-xl font-bold mt-5">31. Quattro Formaggi</p>
-              <p>Fårost, mozzarella, gorgonzola</p>
+              <p>Fårost, mozzarella, gorgonzola, riddarost</p>
             </div>
 
             <div class="flex justify-center">
@@ -480,7 +481,7 @@
             <div class="flex flex-col">
               <p class="text-xl font-bold mt-5">6. Kebab Special</p>
               <p>
-                Kebab/gyros, isbergssallad, tomater, gurska, lök, feferoni,
+                Kebabkött/gyros, isbergssallad, tomater, gurka, lök, feferoni,
                 valfri sås
               </p>
               <div class="flex justify-end mt-5 font-bold border-b-2">
@@ -496,7 +497,7 @@
             </div>
             <div class="flex flex-col">
               <p class="text-xl font-bold mt-5">7. Bagaren Special</p>
-              <p>Kebab/gyros, champinjoner, lök, vitlöksost</p>
+              <p>Kebabkött/gyros, champinjoner, lök, vitlöksost</p>
               <div class="flex justify-end mt-5 font-bold border-b-2">
                 <div class="flex flex-col">
                   <p class="mr-5 text-red-600">Vanlig</p>
@@ -531,11 +532,11 @@
               <div class="flex justify-end mt-5 font-bold border-b-2">
                 <div class="flex flex-col">
                   <p class="mr-5 text-red-600">Vanlig</p>
-                  <p class="text-center text-red-600">95:-</p>
+                  <p class="text-center text-red-600">110:-</p>
                 </div>
                 <div class="flex flex-col pb-2">
                   <p class="text-red-600 mr-5">Familjepizza</p>
-                  <p class="text-center text-red-600">210:-</p>
+                  <p class="text-center text-red-600">230:-</p>
                 </div>
               </div>
               <div class="flex justify-center">
@@ -632,7 +633,7 @@
               pers)
             </p>
             <p class="xl:text-2xl text-center mr-5">
-              Tomat, mozarella och ost ingår på alla pizzor
+              Tomat, mozzarella och ost ingår på alla pizzor
             </p>
 
             <div class="flex flex-col">
@@ -817,7 +818,9 @@
               </div>
             </div>
             <div class="flex flex-col">
-              <p class="text-xl font-bold mt-5">2. Hamburgare med pommes</p>
+              <p class="text-xl font-bold mt-5">
+                2. Hamburgertallrik med pommes
+              </p>
               <p>Sallad, lök, ost, dressing, tomat</p>
               <div class="flex justify-end mt-5 font-bold border-b-2">
                 <div class="flex flex-col">
@@ -897,7 +900,7 @@
                 <div class="flex flex-col">
                   <p class="text-xl font-bold mt-5">6. Snitzel</p>
                   <p class="w-11/12">
-                    Med brunsås/bearnaise och wokade grönsaker
+                    Med brunsås/bearnaisesås och wokade grönsaker
                   </p>
                 </div>
                 <p class="text-red-600 font-bold text-2xl mr-5">169:-</p>
@@ -1006,6 +1009,13 @@
         </div>
       </div>
     </section>
+    <section class="flex justify-center pb-20">
+      <font-awesome-icon
+        :icon="['fas', 'arrow-up']"
+        class="text-6xl cursor-pointer"
+        @click="goUp"
+      />
+    </section>
     <FooterSection />
   </div>
 </template>
@@ -1098,6 +1108,9 @@ export default {
     },
     goToPasta() {
       jump(".pasta");
+    },
+    goUp() {
+      jump(".up");
     }
   }
 };

@@ -9,7 +9,7 @@
       <div class="py-20 xl:flex xl:flex-col">
         <h1 class="text-3xl text-center xl:text-6xl">Lunchbuffé</h1>
         <div class="flex justify-center items-center text-2xl">
-          <h2 class="text-xl mr-2">Måndag-fredag</h2>
+          <h2 class=" mr-2">Måndag-fredag</h2>
           <span>11.00-14:00</span>
         </div>
         <div class="flex flex-col items-center">
@@ -77,6 +77,7 @@ import Navigation from "~/components/Navigation/Navigation";
 import jump from "jump.js";
 import axios from "@nuxtjs/axios";
 import FooterSection from "~/components/Footer/FooterSection";
+
 export default {
   data() {
     return {
@@ -101,11 +102,8 @@ export default {
           });
         }
         this.results = fetchedResult;
-        console.log(this.results[0]);
         this.object = this.results[0];
-      })
-
-      .catch(error => console.log(error));
+      });
   },
   methods: {
     goToLunch() {

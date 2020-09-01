@@ -171,8 +171,6 @@ export default {
     setupFirebase() {
       firebase.auth().onAuthStateChanged(user => {
         if (user) {
-          console.log("logged in" + user.uid);
-
           this.loggedIn = true;
 
           firebase
@@ -183,9 +181,7 @@ export default {
               this.token = token;
             });
         } else {
-          console.log("logged out");
           this.loggedIn = false;
-
           Cookies.remove("access_token");
         }
       });

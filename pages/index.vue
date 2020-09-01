@@ -298,7 +298,7 @@
           <div class=" sm:pb-0 md:mt-0  ">
             <router-link to="/meny">
               <button
-                class="bg-orange-500 text-white text-xl px-6 py-3 focus:outline-none uppercase hover:bg-green-500 rounded-lg mt-10 sm:mt-10 sm:px-5 sm:py-2  md:py-3 md:px-12 md:mt-20 xl:py-4 xl:px-14 xl:text-3xl xl:tracking-wide xl:ml-8"
+                class="bg-orange-500 text-white text-xl px-6 py-3 focus:outline-none uppercase hover:bg-green-500 rounded-lg tracking-widest mt-2 sm:px-5 sm:py-2  md:py-3 md:px-12 md:mt-10 xl:py-4 xl:px-14 xl:text-2xl  xl:ml-8"
               >
                 Meny
               </button>
@@ -320,32 +320,24 @@ export default {
 </script>
 
 <style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
 .cont {
   background-image: url("~assets/images/eating.jpg");
   background-size: cover;
   background-position: center;
 }
-.logo path:nth-child(1) {
-  stroke-dasharray: 200px;
-}
-svg path {
-  stroke-dasharray: 200px;
-  stroke-dashoffset: 300px;
-  animation: animate 2s ease forwards;
+/* .logo path:nth-child(1) {
+  stroke-dasharray: 100px;
+} */
+svg {
+  animation: animate 3s ease forwards;
 }
 
 @keyframes animate {
-  from {
-    opacity: 0;
+  0% {
+    stroke-dasharray: 0 10%;
   }
-  to {
-    stroke-dashoffset: 0;
-    stroke-dasharray: 0;
+  100% {
+    stroke-dasharray: 10% 0;
   }
 }
 </style>

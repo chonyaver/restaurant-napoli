@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="overflow-hidden">
     <Navigation />
-    <section class="pb-20 pt-10">
+    <section class="pb-20 pt-10 up">
       <div
         class="flex flex-col items-center justify-center w-full text-black pb-10"
       >
@@ -86,13 +86,13 @@
           <div class="flex flex-col">
             <div class="flex justify-between items-end">
               <div class="flex flex-col">
-                <p class="text-xl font-bold mt-5">Rött/vitt</p>
+                <p class="text-xl font-bold mt-5">Rött/vitt | Glas</p>
               </div>
               <p class="text-red-600 font-bold text-2xl mr-5">70:-</p>
             </div>
             <div class="flex justify-between items-end">
               <div class="flex flex-col">
-                <p class="text-xl font-bold mt-5">Flaska</p>
+                <p class="text-xl font-bold mt-5">Rött/vitt | Flaska</p>
               </div>
               <p class="text-red-600 font-bold text-2xl mr-5">220:-</p>
             </div>
@@ -349,10 +349,17 @@
             <p class="text-red-600 font-bold text-2xl mr-5">40:-</p>
           </div>
         </div>
-        <div class="flex justify-center items-center mt-32">
+        <div class="flex justify-center items-center mt-32 mr-5">
           <img src="~assets/images/logo.png" alt />
         </div>
       </div>
+    </section>
+    <section class="flex justify-center pt-10 pb-20">
+      <font-awesome-icon
+        :icon="['fas', 'arrow-up']"
+        class="text-6xl cursor-pointer"
+        @click="goUp"
+      />
     </section>
     <FooterSection />
   </div>
@@ -435,6 +442,9 @@ export default {
     },
     goToDesert() {
       jump(".desert");
+    },
+    goUp() {
+      jump(".up");
     }
   }
 };

@@ -26,7 +26,7 @@
       <div class="flex justify-center mt-12">
         <nuxt-link to="/kontakt">
           <button
-            class=" text-white uppercase tracking-widest py-5 px-8 rounded-full cursor-pointer transition duration-500 ease-in-out transform hover:-translate-y-1 hover:text-black  btn-grad"
+            class=" text-white uppercase tracking-widest py-5 px-8 rounded-full cursor-pointer transition duration-500 ease-in-out transform hover:-translate-y-1 hover:text-black btn-grad"
           >
             Öppettider
           </button>
