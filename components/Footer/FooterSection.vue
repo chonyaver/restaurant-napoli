@@ -2,21 +2,13 @@
   <div>
     <footer class="bg-black py-20 text-white">
       <div class="flex justify-center">
-        <a
-          href="https://www.facebook.com/NapoliRestaurang/"
-          target="_blank"
-          rel="noopener"
-        >
+        <a href="https://www.facebook.com/NapoliRestaurang/" target="_blank" rel="noopener">
           <font-awesome-icon
             :icon="['fab', 'facebook']"
             class="text-6xl mr-5 cursor-pointer transition duration-500 ease-in-out transform hover:scale-110 hover:-translate-y-1"
           />
         </a>
-        <a
-          href="https://www.instagram.com/napoli_restaurang/"
-          target="_blank"
-          rel="noopener"
-        >
+        <a href="https://www.instagram.com/napoli_restaurang/" target="_blank" rel="noopener">
           <font-awesome-icon
             :icon="['fab', 'instagram']"
             class="text-6xl ml-5 cursor-pointer transition duration-500 ease-in-out transform hover:scale-110 hover:-translate-y-1"
@@ -26,10 +18,8 @@
       <div class="flex justify-center mt-12">
         <nuxt-link to="/kontakt">
           <button
-            class=" text-white uppercase tracking-widest py-5 px-8 rounded-full cursor-pointer transition duration-500 ease-in-out transform hover:-translate-y-1 hover:text-black btn-grad"
-          >
-            Öppettider
-          </button>
+            class="text-white uppercase tracking-widest py-5 px-8 rounded-full cursor-pointer transition duration-500 ease-in-out transform hover:-translate-y-1 hover:text-black btn-grad"
+          >Öppettider</button>
         </nuxt-link>
       </div>
 
@@ -45,6 +35,12 @@
           tabindex="0"
         ></iframe>
       </div>
+      <a href="https://capdevelopment.se/" target="_blank" rel="noopener">
+        <div class="flex justify-center items-center mt-16 cursor-pointer">
+          <p class="mr-2">Design &#38; kod:</p>
+          <img src="~assets/images/CAP Development.png" alt="cap development logo" class="w-24" />
+        </div>
+      </a>
     </footer>
   </div>
 </template>

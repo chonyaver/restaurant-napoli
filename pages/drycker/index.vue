@@ -2,14 +2,12 @@
   <div class="overflow-hidden">
     <Navigation />
     <section class="pb-20 pt-10 up">
-      <div
-        class="flex flex-col items-center justify-center w-full text-black pb-10"
-      >
+      <div class="flex flex-col items-center justify-center w-full text-black pb-10">
         <img src="~assets/images/logo.png" alt />
 
         <vue-typed-js
           class="mt-10"
-          :strings="['pizzeria', 'pub', 'bar', 'café', 'restaurang']"
+          :strings="['pizzeria', 'pub', 'bar', 'restaurang']"
           :typeSpeed="100"
           :backSpeed="50"
           :backDelay="1000"
@@ -17,9 +15,7 @@
           <h2
             class="text-2xl md:text-4xl xl:text-6xl text-center border-dashed border-b-2 border-orange-500"
           >
-            <span
-              class="text-3xl md:text-6xl typing font-bold uppercase text-orange-600"
-            ></span>
+            <span class="text-3xl md:text-6xl typing font-bold uppercase text-orange-600"></span>
             <br />Napoli | Olofström
           </h2>
         </vue-typed-js>
@@ -52,9 +48,7 @@
           <div
             class="flex justify-center items-center text-4xl xl:text-4xl text-white bg-black h-full w-full bg-opacity-50 hover:bg-opacity-75 transition duration-500 ease-in-out"
           >
-            <p class="cursor-pointer" @click.passive="goToOther">
-              Övriga drycker
-            </p>
+            <p class="cursor-pointer" @click.passive="goToOther">Övriga drycker</p>
           </div>
         </swiper-slide>
         <swiper-slide class="slide-5">
@@ -78,9 +72,7 @@
         data-aos-duration="1000"
         class="w-11/12 border-solid border-2 border-orange-500 pl-5 py-20 shadow-2xl xl:w-5/12 xl:px-10"
       >
-        <p class="text-3xl xl:text-4xl text-center font-bold mb-5 mr-5 wine">
-          Husets vin
-        </p>
+        <p class="text-3xl xl:text-4xl text-center font-bold mb-5 mr-5 wine">Husets vin</p>
 
         <div class="flex flex-col">
           <div class="flex flex-col">
@@ -98,9 +90,7 @@
             </div>
           </div>
 
-          <p class="text-3xl xl:text-4xl text-center font-bold py-10 mr-5 beer">
-            Öl
-          </p>
+          <p class="text-3xl xl:text-4xl text-center font-bold py-10 mr-5 beer">Öl</p>
 
           <div class="flex flex-col">
             <p class="text-xl font-bold mt-5">Eriksberg</p>
@@ -244,9 +234,7 @@
         class="w-11/12 mt-10 border-solid border-2 border-orange-500 pl-5 py-20 shadow-2xl xl:w-5/12 xl:px-10 xl:mt-0"
       >
         <div class="flex flex-col">
-          <p class="text-3xl xl:text-4xl text-center font-bold mr-5 cider">
-            Cider
-          </p>
+          <p class="text-3xl xl:text-4xl text-center font-bold mr-5 cider">Cider</p>
           <div class="flex justify-between items-end">
             <div class="flex flex-col">
               <p class="text-xl font-bold mt-5">Cactus Lime</p>
@@ -290,11 +278,7 @@
             </div>
             <p class="text-red-600 font-bold text-2xl mr-5">60:-</p>
           </div>
-          <p
-            class="text-3xl xl:text-4xl text-center font-bold py-10 mr-5 other"
-          >
-            Övriga drycker
-          </p>
+          <p class="text-3xl xl:text-4xl text-center font-bold py-10 mr-5 other">Övriga drycker</p>
           <div class="flex justify-between items-end">
             <div class="flex flex-col">
               <p class="text-xl font-bold mt-5">Alkoholfri Öl</p>
@@ -337,11 +321,7 @@
             </div>
             <p class="text-red-600 font-bold text-2xl mr-5">5:-</p>
           </div>
-          <p
-            class="text-3xl xl:text-4xl text-center font-bold py-10 mr-5 desert"
-          >
-            Efterrätt
-          </p>
+          <p class="text-3xl xl:text-4xl text-center font-bold py-10 mr-5 desert">Efterrätt</p>
           <div class="flex justify-between items-end">
             <div class="flex flex-col">
               <p class="text-xl font-bold mt-5">Husets Glass</p>
@@ -355,11 +335,7 @@
       </div>
     </section>
     <section class="flex justify-center pt-10 pb-20">
-      <font-awesome-icon
-        :icon="['fas', 'arrow-up']"
-        class="text-6xl cursor-pointer"
-        @click="goUp"
-      />
+      <font-awesome-icon :icon="['fas', 'arrow-up']" class="text-6xl cursor-pointer" @click="goUp" />
     </section>
     <FooterSection />
   </div>
@@ -379,10 +355,11 @@ export default {
     Swiper,
     SwiperSlide,
     jump,
-    FooterSection
+    FooterSection,
   },
   data() {
     return {
+      title: "Napoli Restaurang & Pub Olofström | Drycker",
       swiperOption: {
         effect: "coverflow",
         grabCursor: true,
@@ -393,38 +370,50 @@ export default {
           stretch: 0,
           depth: 100,
           modifier: 1,
-          slideShadows: true
+          slideShadows: true,
         },
         navigation: {
           nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev"
+          prevEl: ".swiper-button-prev",
         },
         pagination: {
-          el: ".swiper-pagination"
+          el: ".swiper-pagination",
         },
         breakpoints: {
           1280: {
             slidesPerView: 4,
-            spaceBetween: 40
+            spaceBetween: 40,
           },
           1024: {
             slidesPerView: 2,
-            spaceBetween: 40
+            spaceBetween: 40,
           },
           768: {
             slidesPerView: 2,
-            spaceBetween: 30
+            spaceBetween: 30,
           },
           640: {
             slidesPerView: 2,
-            spaceBetween: 30
+            spaceBetween: 30,
           },
           320: {
             slidesPerView: 1,
-            spaceBetween: 10
-          }
-        }
-      }
+            spaceBetween: 10,
+          },
+        },
+      },
+    };
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Napoli Restaurang & Pub Olofström, våra drycker",
+        },
+      ],
     };
   },
   methods: {
@@ -445,8 +434,8 @@ export default {
     },
     goUp() {
       jump(".up");
-    }
-  }
+    },
+  },
 };
 </script>
 

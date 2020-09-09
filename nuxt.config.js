@@ -14,14 +14,15 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: "Napoli | Olofström",
+    title: "Napoli Restaurang & Pub Olofström",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
         hid: "description",
         name: "description",
-        content: "Restaurang pizzeria bar cafe pub Olofström "
+        content:
+          "Restaurang Napoli, pizzeria, bar, pub i Olofström. Välkommen in till oss på Napoli Östra storgatan 5 i Olofström. Ät din dagens lunch hos oss."
       }
     ],
     link: [

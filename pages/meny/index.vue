@@ -3,20 +3,18 @@
     <Navigation />
 
     <section class="pb-20 pt-10 up">
-      <div
-        class="flex flex-col items-center justify-center w-full text-black pb-10"
-      >
+      <div class="flex flex-col items-center justify-center w-full text-black pb-10">
         <img src="~assets/images/logo.png" alt />
 
         <vue-typed-js
           class="mt-10"
-          :strings="['pizzeria', 'pub', 'bar', 'café', 'restaurang']"
+          :strings="['pizzeria', 'pub', 'bar', 'restaurang']"
           :typeSpeed="100"
           :backSpeed="50"
           :backDelay="1000"
         >
           <h2
-            class="text-2xl md:text-4xl xl:text-6xl text-center border-dashed border-b-2 border-orange-500 "
+            class="text-2xl md:text-4xl xl:text-6xl text-center border-dashed border-b-2 border-orange-500"
           >
             <span
               class="text-3xl md:text-6xl typing font-bold uppercase tracking-widest text-orange-600"
@@ -33,9 +31,7 @@
             class="flex flex-col justify-center items-center text-5xl text-white bg-black h-full w-full bg-opacity-50 hover:bg-opacity-75 transition duration-500 ease-in-out"
           >
             <p class="cursor-pointer" @click.passive="goToPizza">Pizza</p>
-            <p class="text-xl px-3 text-center md:text-2xl xl:text-xl">
-              Vi har även glutenfria pizzor
-            </p>
+            <p class="text-xl px-3 text-center md:text-2xl xl:text-xl">Vi har även glutenfria pizzor</p>
           </div>
         </swiper-slide>
         <swiper-slide class="slide-2">
@@ -56,27 +52,21 @@
           <div
             class="flex justify-center items-center text-4xl xl:text-4xl text-white bg-black h-full w-full bg-opacity-50 hover:bg-opacity-75 transition duration-500 ease-in-out"
           >
-            <p class="cursor-pointer" @click.passive="goToPotatoe">
-              Bakad potatis
-            </p>
+            <p class="cursor-pointer" @click.passive="goToPotatoe">Bakad potatis</p>
           </div>
         </swiper-slide>
         <swiper-slide class="slide-5">
           <div
             class="flex justify-center items-center text-4xl xl:text-4xl text-white bg-black h-full w-full bg-opacity-50 hover:bg-opacity-75 transition duration-500 ease-in-out"
           >
-            <p class="cursor-pointer" @click.passive="goToHamburger">
-              Hamburgare
-            </p>
+            <p class="cursor-pointer" @click.passive="goToHamburger">Hamburgare</p>
           </div>
         </swiper-slide>
         <swiper-slide class="slide-6">
           <div
             class="flex justify-center items-center text-4xl xl:text-4xl text-white bg-black h-full w-full bg-opacity-50 hover:bg-opacity-75 transition duration-500 ease-in-out"
           >
-            <p class="cursor-pointer" @click.passive="goToSteak">
-              Kött &#38; fiskrätter
-            </p>
+            <p class="cursor-pointer" @click.passive="goToSteak">Kött &#38; fiskrätter</p>
           </div>
         </swiper-slide>
         <swiper-slide class="slide-7">
@@ -103,11 +93,9 @@
           data-aos="flip-left"
           data-aos-easing="ease-out"
           data-aos-duration="500"
-          class="mt-32 flex flex-col items-center py-10 w-4/5 xl:w-2/4 border-2 border-dotted border-orange-500 shadow-lg "
+          class="mt-32 flex flex-col items-center py-10 w-4/5 xl:w-2/4 border-2 border-dotted border-orange-500 shadow-lg"
         >
-          <p class="text-4xl text-center tracking-wide md:text-5xl">
-            För beställningar:
-          </p>
+          <p class="text-4xl text-center tracking-wide md:text-5xl">För beställningar:</p>
           <p class="text-2xl font-bold">0454-917 01</p>
         </div>
       </div>
@@ -115,12 +103,13 @@
     <section class="flex justify-center pt-24 pb-18">
       <vue-typed-js :strings="['Helgmeny']" :typeSpeed="300" :loop="true">
         <h2
-          class="text-xl md:text-2xl xl:text-4xl text-center border-dashed border-b-2 border-orange-500 "
+          class="text-xl md:text-2xl xl:text-4xl text-center border-dashed border-b-2 border-orange-500"
         >
           <span
             class="text-xl md:text-4xl typing font-bold uppercase tracking-widest text-orange-600"
           ></span>
-          <br />Lördag - söndag | 11:00-14:00 <br />À la carte 4-8 |
+          <br />Lördag - söndag | 11:00-14:00
+          <br />À la carte 4-8 |
           <span class="text-red-500">149:-</span>
         </h2>
       </vue-typed-js>
@@ -137,13 +126,9 @@
           data-aos-duration="1000"
           class="w-11/12 border-solid border-2 border-orange-500 pl-5 py-20 shadow-2xl xl:w-5/12 xl:px-10 pizza"
         >
-          <p class="text-3xl xl:text-4xl text-center font-bold mb-5 mr-5">
-            Pizza
-          </p>
+          <p class="text-3xl xl:text-4xl text-center font-bold mb-5 mr-5">Pizza</p>
 
-          <p class="md:text-2xl xl:text-3xl text-red-500">
-            Prisklass 1 - 80:- | Familjepizza 190:-
-          </p>
+          <p class="md:text-2xl xl:text-3xl text-red-500">Prisklass 1 - 80:- | Familjepizza 190:-</p>
 
           <div class="flex flex-col">
             <div class="flex flex-col">
@@ -167,9 +152,9 @@
               <p>Lök, salami</p>
             </div>
 
-            <p class="md:text-2xl mt-5 xl:mt-10 xl:text-3xl  text-red-500">
-              Prisklass 2 - 85:- | Familjepizza 200:-
-            </p>
+            <p
+              class="md:text-2xl mt-5 xl:mt-10 xl:text-3xl text-red-500"
+            >Prisklass 2 - 85:- | Familjepizza 200:-</p>
             <div class="flex flex-col">
               <p class="text-xl font-bold mt-5">6. Bacon</p>
               <p>Lök, bacon</p>
@@ -226,9 +211,9 @@
               <p class="text-xl font-bold mt-5">19. Holje</p>
               <p>Skinka, champinjoner, ananas</p>
             </div>
-            <p class="md:text-2xl mt-5 xl:mt-10 xl:text-3xl text-red-500">
-              Prisklass 3 - 90:- | Familjepizza 210:-
-            </p>
+            <p
+              class="md:text-2xl mt-5 xl:mt-10 xl:text-3xl text-red-500"
+            >Prisklass 3 - 90:- | Familjepizza 210:-</p>
             <div class="flex flex-col">
               <p class="text-xl font-bold mt-5">20. Calzone Special</p>
               <p>Skinka, champinjoner, räkor (Inbakad)</p>
@@ -290,9 +275,7 @@
                 class="flex flex-col bg-orange-500 w-11/12 p-5 text-center text-white rounded-lg shadow-xl mt-20 mr-5 xl:w-3/4 xl:mt-40 gradient"
               >
                 <p class="text-xl">Extra tillbehör</p>
-                <p class="text-sm xl:text-md">
-                  Jordnötter, sås eller sallad 10:- | Kött 20:-
-                </p>
+                <p class="text-sm xl:text-md">Jordnötter, sås eller sallad 10:- | Kött 20:-</p>
               </div>
             </div>
           </div>
@@ -304,12 +287,8 @@
           data-aos-duration="1000"
           class="w-11/12 border-solid border-2 border-orange-500 pl-5 py-20 mt-10 shadow-2xl xl:w-5/12 xl:px-10 pizza xl:mt-0"
         >
-          <p class="text-3xl mr-5 xl:text-4xl text-center font-bold mb-5">
-            Pizza
-          </p>
-          <p class="md:text-2xl xl:text-3xl text-red-500">
-            Prisklass 4 - 95:- | Familjepizza 220:-
-          </p>
+          <p class="text-3xl mr-5 xl:text-4xl text-center font-bold mb-5">Pizza</p>
+          <p class="md:text-2xl xl:text-3xl text-red-500">Prisklass 4 - 95:- | Familjepizza 220:-</p>
           <div class="flex flex-col">
             <div class="flex flex-col">
               <p class="text-xl font-bold mt-5">32. Havets Special</p>
@@ -407,9 +386,7 @@
             </div>
             <p class="text-2xl mt-10 xl:text-3xl">Kebabpizzor</p>
             <div class="flex flex-col">
-              <p class="text-xl font-bold mt-5 border-t-2 pt-2">
-                1. Kebabpizza
-              </p>
+              <p class="text-xl font-bold mt-5 border-t-2 pt-2">1. Kebabpizza</p>
               <p>Kebab eller gyros, valfri sås</p>
               <div class="flex justify-end mt-5 font-bold border-b-2">
                 <div class="flex flex-col">
@@ -544,9 +521,7 @@
                   class="flex flex-col bg-orange-500 w-11/12 p-5 text-center text-white rounded-lg shadow-xl mt-20 mr-5 xl:w-3/4 xl:mt-18 gradient"
                 >
                   <p class="text-xl">Extra tillbehör</p>
-                  <p class="text-sm xl:text-md">
-                    Jordnötter, sås eller sallad 10:- | Kött 20:-
-                  </p>
+                  <p class="text-sm xl:text-md">Jordnötter, sås eller sallad 10:- | Kött 20:-</p>
                 </div>
               </div>
             </div>
@@ -559,12 +534,8 @@
           data-aos-duration="1000"
           class="w-11/12 border-solid border-2 border-orange-500 pl-5 py-20 mt-10 shadow-2xl xl:w-5/12 xl:px-10 pizza"
         >
-          <p class="text-3xl mr-5 xl:text-4xl text-center font-bold mb-5">
-            Specialpizzor
-          </p>
-          <p class="md:text-2xl xl:text-3xl mr-5 text-red-500">
-            Vanlig 100:- | Familjepizza 230:-
-          </p>
+          <p class="text-3xl mr-5 xl:text-4xl text-center font-bold mb-5">Specialpizzor</p>
+          <p class="md:text-2xl xl:text-3xl mr-5 text-red-500">Vanlig 100:- | Familjepizza 230:-</p>
           <p class="xl:text-2xl mr-5">Med mozzarellaost</p>
           <div class="flex flex-col">
             <div class="flex flex-col">
@@ -598,25 +569,17 @@
             </div>
             <div class="flex flex-col">
               <p class="text-xl font-bold mt-5">58. Acapulco</p>
-              <p>
-                Oxfilé, tacokryddmix/sås, vitlök, lök, champinjoner, jalapeno
-              </p>
+              <p>Oxfilé, tacokryddmix/sås, vitlök, lök, champinjoner, jalapeno</p>
             </div>
-            <p class="text-3xl xl:text-4xl text-center font-bold mt-10 mr-5">
-              Plankpizzor
-            </p>
-            <p class="mt-5 md:text-2xl xl:text-3xl text-red-500">
-              Vanlig 100:- | Familjepizza 230:-
-            </p>
+            <p class="text-3xl xl:text-4xl text-center font-bold mt-10 mr-5">Plankpizzor</p>
+            <p class="mt-5 md:text-2xl xl:text-3xl text-red-500">Vanlig 100:- | Familjepizza 230:-</p>
             <div class="flex flex-col">
               <p class="text-xl font-bold mt-5">Plankpizza 1.</p>
               <p>Potatismos, oxfilé, lök, färsk tomat, bearnaise</p>
             </div>
             <div class="flex flex-col">
               <p class="text-xl font-bold mt-5">Plankpizza 2.</p>
-              <p>
-                Potatismos, kebabkött, lök, paprika, champinjoner (Valfri sås)
-              </p>
+              <p>Potatismos, kebabkött, lök, paprika, champinjoner (Valfri sås)</p>
             </div>
             <div class="flex flex-col">
               <p class="text-xl font-bold mt-5">Plankpizza 3.</p>
@@ -625,16 +588,12 @@
                 krydda
               </p>
             </div>
-            <p class="text-center font-bold mt-10 mr-5 xl:text-4xl">
-              American Pan Pizza
-            </p>
+            <p class="text-center font-bold mt-10 mr-5 xl:text-4xl">American Pan Pizza</p>
             <p class="md:text-2xl xl:text-3xl text-center mr-5 text-red-500">
               Small 100:- (1 pers) | Medium 140:- (1-2 pers) | Large 220:- (2-4
               pers)
             </p>
-            <p class="xl:text-2xl text-center mr-5">
-              Tomat, mozzarella och ost ingår på alla pizzor
-            </p>
+            <p class="xl:text-2xl text-center mr-5">Tomat, mozzarella och ost ingår på alla pizzor</p>
 
             <div class="flex flex-col">
               <p class="text-xl font-bold mt-5">1. Miami</p>
@@ -666,18 +625,14 @@
                 class="flex flex-col bg-orange-500 w-11/12 p-5 text-center text-white rounded-lg shadow-xl mt-20 mr-5 xl:w-3/4 gradient"
               >
                 <p class="text-xl">Extra tillbehör</p>
-                <p class="text-sm xl:text-md">
-                  Jordnötter, sås eller sallad 10:- | Kött 20:-
-                </p>
+                <p class="text-sm xl:text-md">Jordnötter, sås eller sallad 10:- | Kött 20:-</p>
               </div>
             </div>
 
-            <p class="text-3xl xl:text-4xl text-center font-bold salad mr-5">
-              Sallader
-            </p>
-            <p class="xl:text-2xl text-center mr-5">
-              Nybakad bröd, isbergssallad, tomat och gurka ingår
-            </p>
+            <p class="text-3xl xl:text-4xl text-center font-bold salad mr-5">Sallader</p>
+            <p
+              class="xl:text-2xl text-center mr-5"
+            >Nybakad bröd, isbergssallad, tomat och gurka ingår</p>
             <p class="text-2xl xl:text-3xl text-center text-red-500">95:-</p>
             <div class="flex flex-col">
               <p class="text-xl font-bold mt-5">1. Grekisk sallad</p>
@@ -713,15 +668,9 @@
             </div>
             <p
               class="text-3xl xl:text-4xl text-center font-bold mt-10 kebab mr-5"
-            >
-              Kebab, kyckling, falafel &#38; taco
-            </p>
-            <p class="xl:text-2xl text-center mr-5">
-              Tomat, lök och gurka ingår
-            </p>
-            <p class="text-2xl xl:text-3xl text-center mr-5 text-red-500">
-              95:-
-            </p>
+            >Kebab, kyckling, falafel &#38; taco</p>
+            <p class="xl:text-2xl text-center mr-5">Tomat, lök och gurka ingår</p>
+            <p class="text-2xl xl:text-3xl text-center mr-5 text-red-500">95:-</p>
             <div class="flex flex-col">
               <p class="text-xl font-bold mt-5">1. Kebab med bröd</p>
               <p>Nybakat bröd, kebabkött, sallad, sås</p>
@@ -771,9 +720,7 @@
           data-aos-duration="1000"
           class="w-11/12 border-solid border-2 border-orange-500 pl-5 py-20 mt-10 shadow-2xl xl:w-5/12 xl:px-10 pizza xl:mt-10"
         >
-          <p class="text-3xl xl:text-4xl text-center font-bold potatoe mr-5">
-            Bakad Potatis
-          </p>
+          <p class="text-3xl xl:text-4xl text-center font-bold potatoe mr-5">Bakad Potatis</p>
           <p class="text-2xl xl:text-3xl text-center mr-5 text-red-500">95:-</p>
           <div class="flex flex-col">
             <div class="flex flex-col">
@@ -782,15 +729,11 @@
             </div>
             <div class="flex flex-col">
               <p class="text-xl font-bold mt-5">2. Räkor</p>
-              <p>
-                Räkor, citron, isbergssallad, tomat, gurka, färsk paprika, majs
-              </p>
+              <p>Räkor, citron, isbergssallad, tomat, gurka, färsk paprika, majs</p>
             </div>
             <div class="flex flex-col">
               <p class="text-xl font-bold mt-5">3. Kyckling</p>
-              <p>
-                Kyckling, isbergssallad, tomat, gurka, ananas, färsk paprika
-              </p>
+              <p>Kyckling, isbergssallad, tomat, gurka, ananas, färsk paprika</p>
             </div>
             <div class="flex flex-col">
               <p class="text-xl font-bold mt-5">4. Tonfisk</p>
@@ -798,13 +741,9 @@
             </div>
             <p
               class="text-3xl xl:text-4xl text-center font-bold mb-5 mt-10 hamburger mr-5"
-            >
-              Hamburgare
-            </p>
+            >Hamburgare</p>
             <div class="flex flex-col">
-              <p class="text-xl font-bold mt-5 border-t-2 pt-2">
-                1. Hamburgare med bröd
-              </p>
+              <p class="text-xl font-bold mt-5 border-t-2 pt-2">1. Hamburgare med bröd</p>
               <p>Sallad, lök, dressing, tomat</p>
               <div class="flex justify-end mt-5 font-bold border-b-2">
                 <div class="flex flex-col">
@@ -818,9 +757,7 @@
               </div>
             </div>
             <div class="flex flex-col">
-              <p class="text-xl font-bold mt-5">
-                2. Hamburgertallrik med pommes
-              </p>
+              <p class="text-xl font-bold mt-5">2. Hamburgertallrik med pommes</p>
               <p>Sallad, lök, ost, dressing, tomat</p>
               <div class="flex justify-end mt-5 font-bold border-b-2">
                 <div class="flex flex-col">
@@ -835,19 +772,13 @@
             </div>
             <p
               class="text-3xl xl:text-4xl text-center font-bold mt-10 steak mr-5"
-            >
-              Kött &#38; Fiskrätter
-            </p>
-            <p class="xl:text-2xl text-center mr-5">
-              Välj mellan kokt, stekt potatis eller pommes
-            </p>
+            >Kött &#38; Fiskrätter</p>
+            <p class="xl:text-2xl text-center mr-5">Välj mellan kokt, stekt potatis eller pommes</p>
             <div class="flex flex-col">
               <div class="flex justify-between items-end">
                 <div class="flex flex-col">
                   <p class="text-xl font-bold mt-5">1. Oxfilé</p>
-                  <p class="w-11/12">
-                    Purjolöksspäckad med rödvinssås och smörslungade grönsaker
-                  </p>
+                  <p class="w-11/12">Purjolöksspäckad med rödvinssås och smörslungade grönsaker</p>
                 </div>
                 <p class="text-red-600 font-bold text-2xl mr-5">239:-</p>
               </div>
@@ -868,9 +799,7 @@
               <div class="flex justify-between items-end">
                 <div class="flex flex-col">
                   <p class="text-xl font-bold mt-5">3. Fläskfilé Oskar</p>
-                  <p class="w-11/12">
-                    Med räkor, sparris, bearnaisesås, och wokade grönsaker
-                  </p>
+                  <p class="w-11/12">Med räkor, sparris, bearnaisesås, och wokade grönsaker</p>
                 </div>
                 <p class="text-red-600 font-bold text-2xl mr-5">239:-</p>
               </div>
@@ -879,9 +808,7 @@
               <div class="flex justify-between items-end">
                 <div class="flex flex-col">
                   <p class="text-xl font-bold mt-5">4. Mixed Grill</p>
-                  <p class="w-11/12">
-                    Oxfilé och fläskfilé med vitlökssås och wokade grönsaker
-                  </p>
+                  <p class="w-11/12">Oxfilé och fläskfilé med vitlökssås och wokade grönsaker</p>
                 </div>
                 <p class="text-red-600 font-bold text-2xl mr-5">239:-</p>
               </div>
@@ -899,9 +826,7 @@
               <div class="flex justify-between items-end">
                 <div class="flex flex-col">
                   <p class="text-xl font-bold mt-5">6. Snitzel</p>
-                  <p class="w-11/12">
-                    Med brunsås/bearnaisesås och wokade grönsaker
-                  </p>
+                  <p class="w-11/12">Med brunsås/bearnaisesås och wokade grönsaker</p>
                 </div>
                 <p class="text-red-600 font-bold text-2xl mr-5">169:-</p>
               </div>
@@ -924,19 +849,13 @@
                 <p class="text-red-600 font-bold text-2xl mr-5">189:-</p>
               </div>
             </div>
-            <p
-              class="text-3xl xl:text-4xl text-center font-bold mt-10 plank mr-5"
-            >
-              Planka
-            </p>
+            <p class="text-3xl xl:text-4xl text-center font-bold mt-10 plank mr-5">Planka</p>
 
             <div class="flex flex-col">
               <div class="flex justify-between items-end">
                 <div class="flex flex-col">
                   <p class="text-xl font-bold mt-5">1. Oxfilé på planka</p>
-                  <p class="w-11/12">
-                    Med potatismos, gorgonzolasås och wokade grönsaker
-                  </p>
+                  <p class="w-11/12">Med potatismos, gorgonzolasås och wokade grönsaker</p>
                 </div>
                 <p class="text-red-600 font-bold text-2xl mr-5">239:-</p>
               </div>
@@ -946,9 +865,7 @@
               <div class="flex justify-between items-end">
                 <div class="flex flex-col">
                   <p class="text-xl font-bold mt-5">2. Fläskfilé på planka</p>
-                  <p class="w-11/12">
-                    med potatismos, bearnaisesås och wokade grönsaker
-                  </p>
+                  <p class="w-11/12">med potatismos, bearnaisesås och wokade grönsaker</p>
                 </div>
                 <p class="text-red-600 font-bold text-2xl mr-5">239:-</p>
               </div>
@@ -958,19 +875,13 @@
               <div class="flex justify-between items-end">
                 <div class="flex flex-col">
                   <p class="text-xl font-bold mt-5">3. Lax på planka</p>
-                  <p class="w-11/12">
-                    Med potatismos, och vitvinssås toppad med havets läckerheter
-                  </p>
+                  <p class="w-11/12">Med potatismos, och vitvinssås toppad med havets läckerheter</p>
                 </div>
                 <p class="text-red-600 font-bold text-2xl mr-5">239:-</p>
               </div>
             </div>
 
-            <p
-              class="text-3xl xl:text-4xl text-center font-bold pasta mt-10 mr-5"
-            >
-              Pasta
-            </p>
+            <p class="text-3xl xl:text-4xl text-center font-bold pasta mt-10 mr-5">Pasta</p>
             <div class="flex flex-col">
               <div class="flex justify-between items-end">
                 <div class="flex flex-col">
@@ -1010,11 +921,7 @@
       </div>
     </section>
     <section class="flex justify-center pb-20">
-      <font-awesome-icon
-        :icon="['fas', 'arrow-up']"
-        class="text-6xl cursor-pointer"
-        @click="goUp"
-      />
+      <font-awesome-icon :icon="['fas', 'arrow-up']" class="text-6xl cursor-pointer" @click="goUp" />
     </section>
     <FooterSection />
   </div>
@@ -1036,10 +943,11 @@ export default {
     Swiper,
     SwiperSlide,
     jump,
-    FooterSection
+    FooterSection,
   },
   data() {
     return {
+      title: "Napoli Restaurang & Pub Olofström | Meny",
       swiperOption: {
         effect: "coverflow",
         grabCursor: true,
@@ -1050,38 +958,50 @@ export default {
           stretch: 0,
           depth: 100,
           modifier: 1,
-          slideShadows: true
+          slideShadows: true,
         },
         navigation: {
           nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev"
+          prevEl: ".swiper-button-prev",
         },
         pagination: {
-          el: ".swiper-pagination"
+          el: ".swiper-pagination",
         },
         breakpoints: {
           1280: {
             slidesPerView: 4,
-            spaceBetween: 40
+            spaceBetween: 40,
           },
           1024: {
             slidesPerView: 2,
-            spaceBetween: 40
+            spaceBetween: 40,
           },
           768: {
             slidesPerView: 2,
-            spaceBetween: 30
+            spaceBetween: 30,
           },
           640: {
             slidesPerView: 2,
-            spaceBetween: 30
+            spaceBetween: 30,
           },
           320: {
             slidesPerView: 1,
-            spaceBetween: 10
-          }
-        }
-      }
+            spaceBetween: 10,
+          },
+        },
+      },
+    };
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Napoli Restaurang & Pub Olofström, vår meny",
+        },
+      ],
     };
   },
   methods: {
@@ -1111,8 +1031,8 @@ export default {
     },
     goUp() {
       jump(".up");
-    }
-  }
+    },
+  },
 };
 </script>
 

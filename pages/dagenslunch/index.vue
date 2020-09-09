@@ -9,7 +9,7 @@
       <div class="py-20 xl:flex xl:flex-col">
         <h1 class="text-3xl text-center xl:text-6xl">Lunchbuffé</h1>
         <div class="flex justify-center items-center text-2xl">
-          <h2 class=" mr-2">Måndag-fredag</h2>
+          <h2 class="mr-2">Måndag-fredag</h2>
           <span>11.00-14:00</span>
         </div>
         <div class="flex flex-col items-center">
@@ -28,36 +28,24 @@
       <div class="w-11/12 xl:ml-20 xl:w-2/5">
         <p
           class="mb-5 text-3xl text-center uppercase tracking-widest xl:text-6xl lunch"
-        >
-          vecka: {{ object.week }}
-        </p>
-        <div
-          class="border-b-2 border-gray-800 border-t-2 py-5 px-5 shadow-lg bg-white"
-        >
+        >vecka: {{ object.week }}</p>
+        <div class="border-b-2 border-gray-800 border-t-2 py-5 px-5 shadow-lg bg-white">
           <p class="text-2xl xl:text-4xl uppercase font-bold">Måndag:</p>
           <p class="text-xl xl:text-2xl">{{ object.monday }}</p>
         </div>
-        <div
-          class="mt-5 border-b-2 border-gray-800 border-t-2 py-5 px-5 shadow-lg bg-white"
-        >
+        <div class="mt-5 border-b-2 border-gray-800 border-t-2 py-5 px-5 shadow-lg bg-white">
           <p class="text-2xl xl:text-4xl uppercase font-bold">Tisdag:</p>
           <p class="text-xl xl:text-2xl">{{ object.tuesday }}</p>
         </div>
-        <div
-          class="mt-5 border-b-2 border-gray-800 border-t-2 py-5 px-5 shadow-lg bg-white"
-        >
+        <div class="mt-5 border-b-2 border-gray-800 border-t-2 py-5 px-5 shadow-lg bg-white">
           <p class="text-2xl xl:text-4xl uppercase font-bold">Onsdag:</p>
           <p class="text-xl xl:text-2xl">{{ object.wednesday }}</p>
         </div>
-        <div
-          class="mt-5 border-b-2 border-gray-800 border-t-2 py-5 px-5 shadow-lg bg-white"
-        >
+        <div class="mt-5 border-b-2 border-gray-800 border-t-2 py-5 px-5 shadow-lg bg-white">
           <p class="text-2xl xl:text-4xl uppercase font-bold">Torsdag:</p>
           <p class="text-xl xl:text-2xl">{{ object.thursday }}</p>
         </div>
-        <div
-          class="mt-5 border-b-2 border-gray-800 border-t-2 py-5 px-5 shadow-lg bg-white"
-        >
+        <div class="mt-5 border-b-2 border-gray-800 border-t-2 py-5 px-5 shadow-lg bg-white">
           <p class="text-2xl xl:text-4xl uppercase font-bold">Fredag:</p>
           <p class="text-xl xl:text-2xl">{{ object.friday }}</p>
         </div>
@@ -81,24 +69,37 @@ import FooterSection from "~/components/Footer/FooterSection";
 export default {
   data() {
     return {
+      title: "Napoli Restaurang & Pub Olofström | Dagens lunch ",
       results: [],
-      object: {}
+      object: {},
+    };
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Napoli Restaurang & Pub Olofström, dagens lunch",
+        },
+      ],
     };
   },
   components: {
     Navigation,
     jump,
-    FooterSection
+    FooterSection,
   },
   mounted() {
     let lunchData = this.$axios
       .$get("https://napoli-b522c.firebaseio.com/days.json")
-      .then(res => {
+      .then((res) => {
         const fetchedResult = [];
         for (let key in res) {
           fetchedResult.unshift({
             ...res[key],
-            id: key
+            id: key,
           });
         }
         this.results = fetchedResult;
@@ -108,7 +109,7 @@ export default {
   methods: {
     goToLunch() {
       jump(".lunch");
-    }
-  }
+    },
+  },
 };
 </script>
